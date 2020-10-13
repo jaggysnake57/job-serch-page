@@ -1,0 +1,192 @@
+@import '_vars';
+
+/*=============================================
+=            reset            =
+=============================================*/
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+
+/*=====  End of reset  ======*/
+
+/*=============================================
+=            site wide            =
+=============================================*/
+body {
+	font-family: $spartan;
+	background-color: $LightGrayishCyanBG;
+}
+.container {
+	width: 78%;
+	max-width: 1440px;
+	margin: 0 auto;
+}
+header {
+	width: 100vw;
+	height: 150px;
+	background: url('/images/bg-header-desktop.svg') center;
+	background-color: $DesaturatedDarkCyan;
+}
+.tagButton {
+	background-color: $LightGrayishCyan;
+	padding: 10px;
+	// padding-right: 0;
+	color: $DesaturatedDarkCyan;
+	border-radius: 3px;
+	font-weight: 700;
+	font-size: .8rem;
+	cursor: pointer;
+	&:hover {
+		background-color: $DesaturatedDarkCyan;
+		color: white;
+	}
+}
+.label {
+	padding: 6px 10px;
+	text-transform: uppercase;
+	font-size: .7rem;
+	font-weight: 700;
+	color: white;
+	border-radius: 15px;
+}
+.featuredLabel {
+	background-color: $VeryDarkGrayish;
+}
+.newLabel {
+	background-color: $DesaturatedDarkCyan;
+}
+/*=====  End of site wide  ======*/
+
+/*=============================================
+=            filter bar            =
+=============================================*/
+
+.filterBar {
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	// width: 100%;
+	padding: 30px;
+	border-radius: 3px;
+	background-color: white;
+	box-shadow: 1px 60px 43px -40px rgba(0, 0, 0, 0.23);
+	position: relative;
+	top: -50px;
+	.filters {
+		width: 90%;
+		display: flex;
+		flex-wrap: wrap;
+	}
+	.tagButton {
+		margin-right: 10px;
+		padding-right: 0;
+		margin-bottom: 10px;
+		cursor: context-menu;
+		&:hover {
+			background-color: $LightGrayishCyan;
+			color: $DesaturatedDarkCyan;
+		}
+		span.remove {
+			width: 10%;
+			padding: 10px;
+			margin-left: 5px;
+			background-color: $DesaturatedDarkCyan;
+			border-radius: 0 3px 3px 0;
+			color: white;
+			cursor: pointer;
+			&:hover {
+				background-color: $VeryDarkGrayish;
+			}
+		}
+	}
+	a {
+		margin-left: auto;
+		color: $DarkGrayishCyan;
+		&:hover {
+			color: $DesaturatedDarkCyan;
+		}
+	}
+}
+
+/*=====  End of filter bar  ======*/
+
+/*=============================================
+=            job card            =
+=============================================*/
+.featured {
+	border-left: 5px solid $DesaturatedDarkCyan;
+}
+.jobCard {
+	display: flex;
+	align-items: center;
+	background-color: white;
+	box-shadow: 1px 60px 43px -40px rgba(0, 0, 0, 0.23);
+	padding: 25px 30px;
+	margin-bottom: 30px;
+
+	/*----------  logo  ----------*/
+
+	.logo {
+		margin-right: 3%;
+	}
+
+	/*----------  job details  ----------*/
+
+	.jobDetails {
+		width: 40%;
+		display: flex;
+		flex-direction: column;
+		justify-content: space-between;
+		height: 93px;
+		.company {
+			display: flex;
+			align-items: center;
+			h2 {
+				margin-right: 10px;
+				font-size: 1em;
+				color: $DesaturatedDarkCyan;
+			}
+			span.label {
+				margin-right: 5px;
+			}
+		}
+		.role {
+			p {
+				font: 700 1.3rem $spartan;
+				color: $VeryDarkGrayish;
+			}
+		}
+		.particulars {
+			display: flex;
+			align-items: center;
+			width: 100%;
+			p {
+				color: $DarkGrayishCyan;
+				margin-right: 15px;
+				&:nth-child(even) {
+					display: block;
+					width: 3px;
+					height: 3px;
+					background-color: $DarkGrayishCyan;
+				}
+			}
+		}
+	}
+
+	/*----------  tags  ----------*/
+
+	.tags {
+		margin-left: auto;
+		display: flex;
+		justify-content: flex-end;
+		flex-wrap: wrap;
+		.tagButton {
+			margin: 5px;
+			margin-left: 10px;
+		}
+	}
+}
+
+/*=====  End of job card  ======*/

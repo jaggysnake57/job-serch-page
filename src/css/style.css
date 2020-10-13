@@ -1,0 +1,209 @@
+/*=============================================
+=            variables            =
+=============================================*/
+/*=====  End of variables  ======*/
+/*=============================================
+=            reset            =
+=============================================*/
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box; }
+
+/*=====  End of reset  ======*/
+/*=============================================
+=            site wide            =
+=============================================*/
+body {
+  font-family: "Spartan", sans-serif;
+  background-color: #effafa; }
+
+.container {
+  width: 78%;
+  max-width: 1440px;
+  margin: 0 auto; }
+
+header {
+  width: 100vw;
+  height: 150px;
+  background: url("/images/bg-header-desktop.svg") center;
+  background-color: #5ba4a4; }
+
+.tagButton {
+  background-color: #eef6f6;
+  padding: 10px;
+  color: #5ba4a4;
+  border-radius: 3px;
+  font-weight: 700;
+  font-size: .8rem;
+  cursor: pointer; }
+  .tagButton:hover {
+    background-color: #5ba4a4;
+    color: white; }
+
+.label {
+  padding: 6px 10px;
+  text-transform: uppercase;
+  font-size: .7rem;
+  font-weight: 700;
+  color: white;
+  border-radius: 15px; }
+
+.featuredLabel {
+  background-color: #2c3a3a; }
+
+.newLabel {
+  background-color: #5ba4a4; }
+
+/*=====  End of site wide  ======*/
+/*=============================================
+=            filter bar            =
+=============================================*/
+.filterBar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 30px;
+  border-radius: 3px;
+  background-color: white;
+  box-shadow: 1px 60px 43px -40px rgba(0, 0, 0, 0.23);
+  position: relative;
+  top: -50px; }
+  .filterBar .filters {
+    width: 90%;
+    display: flex;
+    flex-wrap: wrap; }
+  .filterBar .tagButton {
+    margin-right: 10px;
+    padding-right: 0;
+    margin-bottom: 10px;
+    cursor: context-menu; }
+    .filterBar .tagButton:hover {
+      background-color: #eef6f6;
+      color: #5ba4a4; }
+    .filterBar .tagButton span.remove {
+      width: 10%;
+      padding: 10px;
+      margin-left: 5px;
+      background-color: #5ba4a4;
+      border-radius: 0 3px 3px 0;
+      color: white;
+      cursor: pointer; }
+      .filterBar .tagButton span.remove:hover {
+        background-color: #2c3a3a; }
+  .filterBar a {
+    margin-left: auto;
+    color: #7b8e8e; }
+    .filterBar a:hover {
+      color: #5ba4a4; }
+
+/*=====  End of filter bar  ======*/
+/*=============================================
+=            job card            =
+=============================================*/
+.featured {
+  border-left: 5px solid #5ba4a4; }
+
+.jobCard {
+  display: flex;
+  align-items: center;
+  background-color: white;
+  box-shadow: 1px 60px 43px -40px rgba(0, 0, 0, 0.23);
+  padding: 25px 30px;
+  margin-bottom: 30px;
+  /*----------  logo  ----------*/
+  /*----------  job details  ----------*/
+  /*----------  tags  ----------*/ }
+  .jobCard .logo {
+    margin-right: 3%; }
+  .jobCard .jobDetails {
+    width: 40%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 93px; }
+    .jobCard .jobDetails .company {
+      display: flex;
+      align-items: center; }
+      .jobCard .jobDetails .company h2 {
+        margin-right: 10px;
+        font-size: 1em;
+        color: #5ba4a4; }
+      .jobCard .jobDetails .company span.label {
+        margin-right: 5px; }
+    .jobCard .jobDetails .role p {
+      font: 700 1.3rem "Spartan", sans-serif;
+      color: #2c3a3a; }
+    .jobCard .jobDetails .particulars {
+      display: flex;
+      align-items: center;
+      width: 100%; }
+      .jobCard .jobDetails .particulars p {
+        color: #7b8e8e;
+        margin-right: 15px; }
+        .jobCard .jobDetails .particulars p:nth-child(even) {
+          display: block;
+          width: 3px;
+          height: 3px;
+          background-color: #7b8e8e; }
+  .jobCard .tags {
+    margin-left: auto;
+    display: flex;
+    justify-content: flex-end;
+    flex-wrap: wrap; }
+    .jobCard .tags .tagButton {
+      margin: 5px;
+      margin-left: 10px; }
+
+/*=====  End of job card  ======*/
+/*=============================================
+=            variables            =
+=============================================*/
+/*=====  End of variables  ======*/
+/*=============================================
+=            tablet            =
+=============================================*/
+@media screen and (max-width: 900px) {
+  .jobCard {
+    position: relative;
+    height: auto; }
+    .jobCard .logo {
+      width: 50px;
+      position: absolute;
+      top: -25px; }
+      .jobCard .logo img {
+        width: 100%; }
+    .jobCard .jobDetails {
+      margin-top: 10px;
+      justify-content: flex-start;
+      width: 50%; }
+      .jobCard .jobDetails .company,
+      .jobCard .jobDetails .role,
+      .jobCard .jobDetails .particulars {
+        margin-bottom: 10px; } }
+
+/*=====  End of tablet  ======*/
+/*=============================================
+=            variables            =
+=============================================*/
+/*=====  End of variables  ======*/
+/*=============================================
+=            mobile            =
+=============================================*/
+@media screen and (max-width: 700px) {
+  .jobCard {
+    flex-direction: column;
+    justify-content: start;
+    align-items: flex-start; }
+    .jobCard .jobDetails {
+      width: 100%;
+      height: auto;
+      margin-bottom: 20px;
+      padding-bottom: 10px;
+      border-bottom: 1px solid #7b8e8e; }
+    .jobCard .tags {
+      margin-left: 0;
+      justify-content: start; }
+      .jobCard .tags .tagButton {
+        margin-left: 0;
+        margin-right: 15px; } }

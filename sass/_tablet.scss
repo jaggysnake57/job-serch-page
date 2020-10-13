@@ -1,0 +1,30 @@
+@import '_vars';
+
+/*=============================================
+=            tablet            =
+=============================================*/
+@media screen and (max-width: 900px) {
+	.jobCard {
+		position: relative;
+		height: auto;
+		.logo {
+			width: 50px;
+			position: absolute;
+			top: -25px;
+			img {
+				width: 100%;
+			}
+		}
+		.jobDetails {
+			margin-top: 10px;
+			justify-content: flex-start;
+			width: 50%;
+			.company,
+			.role,
+			.particulars {
+				margin-bottom: 10px;
+			}
+		}
+	}
+}
+/*=====  End of tablet  ======*/

@@ -1,0 +1,27 @@
+@import '_vars';
+
+/*=============================================
+=            mobile            =
+=============================================*/
+@media screen and (max-width: 700px) {
+	.jobCard {
+		flex-direction: column;
+		justify-content: start;
+		align-items: flex-start;
+		.jobDetails {
+			width: 100%;
+			height: auto;
+			margin-bottom: 20px;
+			padding-bottom: 10px;
+			border-bottom: 1px solid $DarkGrayishCyan;
+		}
+		.tags {
+			margin-left: 0;
+			justify-content: start;
+			.tagButton {
+				margin-left: 0;
+				margin-right: 15px;
+			}
+		}
+	}
+}
